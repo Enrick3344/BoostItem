@@ -40,19 +40,27 @@ class BoostItem extends PluginBase implements Listener{
         }
     }
     
+    public function getBoostDistance(){
+        return $this->getConfig()->get("Boost-Distance");  
+    }
+    
+    public function getBoostHeight(){
+        return $this->getConfig()->get("Boost-Height");  
+    }
+    
     public function boostPlayer(Player $player){
         switch($player->getDirection()){
                 case 0:
-                    $player->knockBack($player, 0, $this->getLaunchDistance(), 0, $this->getBaseValue());
+                    $player->knockBack($player, 0, $this->getBoostDistance(), 0, $this->getBoostHeight());
                     break;
                 case 1:
-                    $player->knockBack($player, 0, 0, $this->getLaunchDistance(), $this->getBaseValue());
+                    $player->knockBack($player, 0, 0, $this->getBoostDistance(), $this->getBoostHeight());
                     break;
                 case 2:
-                    $player->knockBack($player, 0, -$this->getLaunchDistance(), 0, $this->getBaseValue());
+                    $player->knockBack($player, 0, -$this->getBoostDistance(), 0, $this->getBoostHeight());
                     break;
                 case 3:
-                    $player->knockBack($player, 0, 0, -$this->getLaunchDistance(), $this->getBaseValue());
+                    $player->knockBack($player, 0, 0, -$this->getBoostDistance(), $this->getBoostHeight());
                     break;
           }
      }
