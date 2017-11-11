@@ -24,7 +24,7 @@ class BoostItem extends PluginBase implements Listener{
         $inventory = $player->getInventory();
         $item = $this->getConfig()->get("Item-ID");
         $name = $this->getConfig()->get("Item-Name");
-        $inventory->setItem(0, Item::fromString()->setCustomName($name));
+        $inventory->setItem(0, Item::fromString($item)->setCustomName($name));
     }
     
     public function onTap(PlayerInteractEvent $event){
