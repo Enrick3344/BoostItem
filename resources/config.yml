@@ -1,0 +1,10 @@
+---
+# BoostItem Configuration File
+# Plugin By Enrick3344
+
+# The Item Id that will boost players. This item will be added to their inventory on their join.
+Item-ID: 369
+
+# The Custom Name The Item Will Have!
+Item-Name: "§9Booster"
+...
