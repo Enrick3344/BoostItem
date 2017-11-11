@@ -7,4 +7,10 @@ Item-ID: 369
 
 # The Custom Name The Item Will Have!
 Item-Name: "§9Booster"
+
+# Boost Height
+Boost-Height: 0.5
+
+# Boost Distance
+Boost-Distance: 10
 ...
